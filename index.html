@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <head>
+    <style>
+        body{width: 800px; margin: 10px auto;}
+        .top{overflow: hidden;}
+        .menu{float: right;}
+        .face{
+            width: 200px; height: auto; margin: 0 auto; border-radius: 10%;
+            float: left;
+        }
+        .name{display: inline; float: left;}
+        ul{display: inline;}
+        li{display: inline;}
+        a{text-decoration: none; color: gray;}
+        a:hover{color: black;}
+        p{display: inline;}
+        .HomeContent{overflow: hidden;}
+        .introduce{float: left; display: inline; width: 500px; margin-left: 10px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js">
+        $(document).read(function(){
+        });
+    </script>
     <title>Yyoonmo | personalsite</title>
 </head>
 <body>
-    <div><img src="./image/myFace.jpg/" alt=""></div>
+    <div class="top">
+        <h2 class="name">Yang Yoonmo</h2>
+        <ul class="menu">
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#PUBLICATION">PUBLICATION</a></li>
+        </ul>
+    </div>
+    <div class="HomeContent">
+        <img src="./iamges/myFace.jpg" alt="" class="face">
+        <div class="introduce">
+            <h3>RESEARCH INTEREST</h3>
+            <p>I'm a college student in the Department of Computer Science and Engineering at Kangwon national university, South Korea.
+                I graduated from Yangil Middle School and Yangil High School in Yangpyeong, Gyeonggi-do.                
+            </p>
+        </div>
+    </div>
 </body>
