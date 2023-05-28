@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <head>
+    <title>Yyoonmo | personalsite</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
     <style>
         body{width: 800px; margin: 10px auto;}
         .top{overflow: hidden;}
-        .menu{float: right;}
+        div hr{display: none;}
+        .menu{float: right; display: block; margin: 40px 0;}
         .face{
-            width: 200px; height: auto; margin: 0 auto; border-radius: 10%;
+            width: 150px; height: auto; margin: 25px 0; border-radius: 10%;
             float: left;
         }
-        .name{display: inline; float: left;}
+        .name{display: block; float: left; margin: 20px 0;}
         ul{display: inline;}
         li{display: inline;}
         a{text-decoration: none; color: gray;}
         a:hover{color: black;}
         p{display: inline;}
-        .HomeContent{overflow: hidden;}
-        .introduce{float: left; display: inline; width: 500px; margin-left: 10px;}
+        .HomeContent{overflow: hidden; width: 600px; float: left;}
+        .introduce{float: left; display: inline; width: 400px; margin-left: 10px;}
+        @media screen and (max-width: 800px) {
+            .HomeContent{width: 400px;}
+            .face{width: 100px; height: auto; margin: 21px auto;}
+            .name{float: none; font-size: large; text-align: center; margin: 10px 0;}
+            body{width: 400px; margin: 10px auto;}
+            div hr{display: block;}
+            .introduce{font-size: small; width: 250px;}
+            .menu{
+                width: 400px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 10px;
+            }
+            ul{padding-left: 0;}
+            h3{text-align: center;}
+            li:nth-child(n+2){margin-left: 10px;}
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.js">
         $(document).read(function(){
         });
     </script>
-    <title>Yyoonmo | personalsite</title>
 </head>
 <body>
-    <div class="top">
-        <h2 class="name">Yang Yoonmo</h2>
-        <ul class="menu">
-            <li><a href="#HOME">HOME</a></li>
-            <li><a href="#PUBLICATION">PUBLICATION</a></li>
-        </ul>
-    </div>
     <div class="HomeContent">
-        <img src="./image/myFace.jpg" alt="" class="face">
+        <div class="top">
+            <h2 class="name">Yang Yoonmo</h2>
+        </div>
+        <img src="./images/myFace.jpg" alt="" class="face">
         <div class="introduce">
             <h3>RESEARCH INTEREST</h3>
             <p>I'm a college student in the Department of Computer Science and Engineering at Kangwon national university, South Korea.
                 I graduated from Yangil Middle School and Yangil High School in Yangpyeong, Gyeonggi-do.                
             </p>
         </div>
+    </div>
+    <div class="menu">
+        <hr>
+        <ul>
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#PUBLICATION">PUBLICATION</a></li>
+        </ul>
     </div>
 </body>
