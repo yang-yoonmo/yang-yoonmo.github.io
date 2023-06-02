@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+    <title>Yyoonmo | personalsite</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+    <style>
+        body{width: 800px; margin: 10px auto;}
+        .top{overflow: hidden;}
+        div hr{display: none;}
+        .menu{float: right; display: inline; margin: 20px 0;}
+        .face{
+            width: 150px; height: auto; margin: 25px 0; border-radius: 10%;
+            float: left;
+        }
+        .name{display: block; float: left; margin: 20px 0;}
+        .name{
+            text-decoration: none; color: black; font-weight: bold; font-size: larger;
+            display: block; float: left; margin: 20px 0;}
+        ul{display: inline;}
+        li{display: inline;}
+        a{text-decoration: none; color: gray;}
+        #goHome{color: black; font-weight: bold;}
+        a:hover{color: black;}
+        p{display: inline;}
+        .HomeContent{overflow: hidden; width: 600px; float: left;}
+        .introduce{float: left; display: inline; width: 400px; margin-left: 10px;}
+        .publication{display: none;}
+        .home{position: relative; width: 600px; height: 225px;}
+        .mail{position: absolute; bottom: 0; left: 160px; color: red;}
+        .menuBlock{width: 50px; height: 40px; float: right; border-color: black; display: none; border: thin solid grey;
+        border-radius: 5px;}
+        span{
+            display: block;
+            background:grey;
+            margin-top:6px;
+            margin-bottom:6px;
+            width:30px;
+            height: 2px; 
+            border-radius:2px;
+
+        }
+        .container{
+            position: relative;
+            width: 30px; height: 30px;
+            left: 50%; top: 50%;
+            margin-left: -15px; margin-top: -15px;
+        }
+        @media screen and (max-width: 800px) {
+            html{height: 100%;}
+            .home{width: 100%; margin-top: 61.6px;}
+            .top{position: absolute; z-index: 1; background-color: white; width: 100%; height: 61.6px;}
+            .HomeContent{width: 100%; height: 100%; overflow: auto; margin-bottom: 10%;}
+            .face{float: none; width: 80%; border-radius: 0%; margin: 1% 10%;}
+            .name{float: left; font-size: large; margin: 25px 20.8px; height: 20px;}
+            body{width: 100%; height: 100%;}
+            div hr{display: block;}
+            .mail{position: static; display: block;}
+            .introduce{float: none; font-size: small; text-overflow: ellipsis; margin-bottom: 10%;}
+            .menuBlock{margin: 10px 20px; display: block;}
+            .menu{display: none; width: 100%; height: 20%; position: absolute; right: 0; top: -20%; background-color: white;}
+            li{display: block;}
+            h3{text-align: center;}
+            li:nth-child(n+2){margin-left: 10px;}
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.menuBlock').click(function(){
+                $('.menu').show().animate({top: 0});
+            });
+            $('#goHome').click(function(){
+                $('.face').css('display', 'block');
+                $('.introduce').css('display', 'block');
+                $('.publication').css('display', 'none');
+                $('.mail').css('display', 'block');
+                $('#goHome').css('font-weight' ,'bold');
+                $('#goHome').css('color' ,'black');
+                $('#goPublication').css('font-weight' ,'400');
+                $('#goPublication').css('color' ,'gray');
+                $('.home').css('height', '225px')
+            });
+            $('#goPublication').click(function(){
+                $('.face').css('display', 'none');
+                $('.introduce').css('display', 'none');
+                $('.publication').css('display', 'block');
+                $('.mail').css('display', 'none');  
+                $('#goPublication').css('font-weight' ,'bold');
+                $('#goPublication').css('color' ,'black');
+                $('#goHome').css('font-weight' ,'400');
+                $('#goHome').css('color' ,'gray');
+                $('.home').css('height', '0');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="HomeContent">
+        <div class="top">
+            <a class="name" href="">Yang Yoonmo</a>
+            <div class="menuBlock">
+                <div class="container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#HOME" id="goHome">HOME</a></li>
+                    <li><a href="#PUBLICATION" id="goPublication">PUBLICATION</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="home">
+            <img src="./image/myFace.jpg" alt="" class="face">
+            <div class="introduce">
+                <h3>RESEARCH INTEREST</h3>
+                <p>I'm a college student in the Department of Computer Science and Engineering at Kangwon national university, South Korea.
+                    I graduated from Yangil Middle School and Yangil High School in Yangpyeong, Gyeonggi-do.                
+                </p>
+            </div>
+            <a href="mailto:yang582438@naver.com" class="mail">yang582438@naver.com</a>
+        </div>
+        <div class="publication">
+            <div class="2023">
+                <h2>2023</h2>
+            </div>
+            <div class="2022">
+                <h2>2022</h2>
+            </div>
+            <div class="2021">
+                <h2>2021</h2>
+            </div>
+            <div class="2020">
+                <h2>2020</h2>
+            </div>
+        </div>
+    </div>
+</body>
