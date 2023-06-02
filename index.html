@@ -4,7 +4,8 @@
     <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
     <style>
         body{width: 800px; margin: 10px auto;}
-        .top{overflow: hidden;}
+        .topContent{overflow: hidden;}
+        .nameMenuB{display: inline;}
         div hr{display: none;}
         .menu{float: right; display: inline; margin: 20px 0;}
         .face{
@@ -47,7 +48,8 @@
         @media screen and (max-width: 800px) {
             html{height: 100%;}
             .home{width: 100%; margin-top: 61.6px;}
-            .top{position: absolute; z-index: 1; background-color: white; width: 100%; height: 61.6px;}
+            .topContent{height: 50%; width: 100%; position: absolute;}
+            .nameMenuB{position: absolute; z-index: 1; background-color: white; width: 100%; height: 61.6px;}
             .HomeContent{width: 100%; height: 100%; overflow: auto; margin-bottom: 10%;}
             .face{float: none; width: 80%; border-radius: 0%; margin: 1% 10%;}
             .name{float: left; font-size: large; margin: 25px 20.8px; height: 20px;}
@@ -55,18 +57,20 @@
             div hr{display: block;}
             .mail{position: static; display: block;}
             .introduce{float: none; font-size: small; text-overflow: ellipsis; margin-bottom: 10%;}
+            .publication{margin-top: 61.6px;}
             .menuBlock{margin: 10px 20px; display: block;}
-            .menu{display: none; width: 100%; height: 20%; position: absolute; right: 0; top: -20%; background-color: white;}
-            li{display: block;}
+            .menu{display: none; width: 100%; height: 30%; position: absolute; top: 61.6px; background-color: white; z-index: 3;
+            margin: 0 0;}
+            ul{margin: 5px; display: block;}
+            li{margin-left: 10px; margin: 15px 0; display: block;}
             h3{text-align: center;}
-            li:nth-child(n+2){margin-left: 10px;}
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
             $('.menuBlock').click(function(){
-                $('.menu').show().animate({top: 0});
+                $('.menu').slideToggle();
             });
             $('#goHome').click(function(){
                 $('.face').css('display', 'block');
@@ -78,6 +82,7 @@
                 $('#goPublication').css('font-weight' ,'400');
                 $('#goPublication').css('color' ,'gray');
                 $('.home').css('height', '225px')
+                $('.menu').slideUp();
             });
             $('#goPublication').click(function(){
                 $('.face').css('display', 'none');
@@ -89,19 +94,22 @@
                 $('#goHome').css('font-weight' ,'400');
                 $('#goHome').css('color' ,'gray');
                 $('.home').css('height', '0');
+                $('.menu').slideUp();
             });
         });
     </script>
 </head>
 <body>
     <div class="HomeContent">
-        <div class="top">
-            <a class="name" href="">Yang Yoonmo</a>
-            <div class="menuBlock">
-                <div class="container">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <div class="topContent">
+            <div class="nameMenuB">
+                <a class="name" href="">Yang Yoonmo</a>
+                <div class="menuBlock">
+                    <div class="container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
             <div class="menu">
