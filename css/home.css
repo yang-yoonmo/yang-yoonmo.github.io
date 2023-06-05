@@ -1,0 +1,11 @@
+.face{ width: 200px; height: auto; margin: 25px 0; border-radius: 10%;float: left;}
+.introduce{float: left; display: inline; width: 590px; margin-left: 10px;}
+.active_details{display: none; margin-top: 61.6px;}
+.home{position: relative; width: 800px; height: 225px; margin-top: 61.6px;}
+.mail{float: left; bottom: 0; color: red; margin-left: 10px;}
+@media screen and (max-width: 800px) {
+    .home{width: 100%; margin-top: 61.6px;}
+    .face{float: none; width: 80%; border-radius: 0%; margin: 1% 10%;}
+    .mail{display: block; margin-top: 5%; font-size: small; width: 800px;}
+    .introduce{float: none; font-size: small; text-overflow: ellipsis; margin-bottom: 10%;}
+}

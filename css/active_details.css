@@ -1,0 +1,8 @@
+.whatis{margin-left: 20px; margin-right: 20px; font-weight: 400;}
+#semesterList{border: thin solid grey; border-color: grey; padding: 0; margin-left: 10px; width: 120px; height: 30px;
+    border-radius: 5px; display: block; text-align: center;}
+.semester{border: 0; width: 30px; height: 30px; display: inline-block;}
+.semester:nth-child(n+2){border-left: 1px solid grey;}
+@media screen and (max-width: 800px) {
+    .active_details{margin-top: 61.6px;}
+}

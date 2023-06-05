@@ -1,0 +1,16 @@
+.hobby{display: none; margin-top: 61.6px;}
+.hobby p{font-weight: 350; margin: 5px 0; display: inline-block; text-overflow: ellipsis;}
+.bowling .bowlingPicture{position: relative; width: 90%; float: left; margin-left: -45%; left: 50%; top: 5%;}
+.bowling .frame{border: 1px solid #76767697; width: 300px; height: 280px; box-shadow: 1px 1px 5px; display: inline-block; margin-left: 5px;}
+.bowling .pIntroduce{float: right; width: 490px; margin-top: 15px;}
+.cook .cookPicture{position: relative; width: 200px; float: right; margin-right: -100px; right: 50%; top: 5%;}
+.cook .frame{border: 1px solid #76767697; width: 220px; height: 250px; box-shadow: 1px 1px 5px; display: inline-block; margin-right: 5px;}
+.cook .pIntroduce{margin: 5px 0; float: left; width: 570px;}
+.coding .codePicture{position: relative; width: 300px; float: left; margin-left: -150px; left: 50%; top: 5%;}
+.coding .frame{border: 1px solid #76767697; width: 330px; height: 220px; box-shadow: 1px 1px 5px; display: inline-block; margin-left: 5px;}
+.coding .pIntroduce{float: right; width: 460px; margin-top: 15px;}
+            
+@media screen and (max-width: 800px) {
+    .hobby{margin-top: 61.6px;}
+    .bowling.pIntroduce, .cook .pIntroduce, .hobby .pIntroduce{float: none; width: 100%;}
+}

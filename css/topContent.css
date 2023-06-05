@@ -1,0 +1,41 @@
+.topContent{overflow: hidden; position: fixed; z-index: 5; width: 800px; height: 61.6px; background-color: white; top: 0; width: 800px;}
+.menuBlock{width: 50px; height: 40px; float: right; border-color: black; display: none; border: thin solid grey;
+    border-radius: 5px;}
+.nameMenuB{display: inline; width: 800px;}
+span{
+    display: block;
+    background:grey;
+    margin-top:6px;
+    margin-bottom:6px;
+    width:30px;
+    height: 2px; 
+    border-radius:2px;
+}
+.container{
+    position: relative;
+    width: 30px; height: 30px;
+    left: 50%; top: 50%;
+    margin-left: -15px; margin-top: -15px;
+}
+div hr{display: none;}
+.menu{float: right; display: inline; margin: 20px 0; background-color: white;}
+.name{display: block; float: left; margin: 20px 0;text-decoration: none; color: black; font-weight: bold; font-size: larger;
+    display: block; float: left; margin: 20px 0;}
+ul{display: inline;}
+li{display: inline; margin-right: 5px;}
+a{text-decoration: none; color: gray;}
+#goHome{color: black; font-weight: bold;}
+a:hover{color: black;}
+p{display: inline;}
+
+@media screen and (max-width: 800px) {
+    .topContent{width: 100%; position: fixed;}
+    .nameMenuB{position: fixed; z-index: 1; background-color: white; width: 100%; height: 61.6px;}
+    .menuBlock{margin: 10px 20px; display: block;}
+    .menu{display: none; width: 100%; height: 20%; position: fixed; top: 61.6px; background-color: white; z-index: 3;
+    margin: 0 0;}
+    .name{float: left; font-size: large; margin: 25px 20.8px; height: 20px;}
+    .menu ul{margin: 5px; display: block;}
+    .menu li{margin-left: 10px; margin: 15px 0; display: block;}
+    
+}
