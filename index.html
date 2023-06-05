@@ -1,175 +1,128 @@
 <!DOCTYPE html>
+
 <head>
     <title>Yyoonmo | personalsite</title>
+    <link rel="stylesheet" href="./css/topContent.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/active_details.css">
+    <link rel="stylesheet" href="./css/hobby.css">
     <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
     <style>
-        body{width: 1000px; margin: 10px auto;}
-        .topContent{overflow: hidden;}
-        .nameMenuB{display: inline;}
-        div hr{display: none;}
-        .menu{float: right; display: inline; margin: 20px 0;}
-        .face{
-            width: 200px; height: auto; margin: 25px 0; border-radius: 10%;
-            float: left;
-        }
-        .name{display: block; float: left; margin: 20px 0;}
-        .name{
-            text-decoration: none; color: black; font-weight: bold; font-size: larger;
-            display: block; float: left; margin: 20px 0;}
-        ul{display: inline;}
-        li{display: inline;}
-        a{text-decoration: none; color: gray;}
-        #goHome{color: black; font-weight: bold;}
-        a:hover{color: black;}
-        p{display: inline;}
-        .mainContent{overflow: hidden; width: 800px; float: left;}
-        .introduce{float: left; display: inline; width: 590px; margin-left: 10px;}
-        .active_details{display: none;}
-        .home{position: relative; width: 800px; height: 225px;}
-        .mail{float: left; bottom: 0; color: red; margin-left: 10px;}
-        .menuBlock{width: 50px; height: 40px; float: right; border-color: black; display: none; border: thin solid grey;
-        border-radius: 5px;}
-        .whatis{margin-left: 20px; margin-right: 20px; font-weight: 400;}
-        #semesterList{border: thin solid grey; border-color: grey; padding: 0; margin-left: 10px; width: 120px; height: 30px;
-        border-radius: 5px; display: block; text-align: center;}
-        .semester{border: 0; width: 30px; height: 30px; display: inline-block;}
-        .semester:nth-child(n+2){border-left: 1px solid grey;}
-        span{
-            display: block;
-            background:grey;
-            margin-top:6px;
-            margin-bottom:6px;
-            width:30px;
-            height: 2px; 
-            border-radius:2px;
-        }
-        .container{
-            position: relative;
-            width: 30px; height: 30px;
-            left: 50%; top: 50%;
-            margin-left: -15px; margin-top: -15px;
-        }
+        body{width: 800px; margin: 10px auto;}
+        div hr{display: block;}
         @media screen and (min-width:801px) {
             .menu{display: block !important;}
         }
         @media screen and (max-width: 800px) {
-            html{height: 100%;}
-            .home{width: 100%; margin-top: 61.6px;}
-            .topContent{height: 50%; width: 100%; position: absolute;}
-            .nameMenuB{position: absolute; z-index: 1; background-color: white; width: 100%; height: 61.6px;}
-            .mainContent{width: 100%; height: 100%; overflow: auto; margin-bottom: 10%;}
-            .face{float: none; width: 80%; border-radius: 0%; margin: 1% 10%;}
-            .name{float: left; font-size: large; margin: 25px 20.8px; height: 20px;}
-            body{width: 100%; height: 100%;}
+            body{overflow-x: hidden; width: 100%; height: 100%;}
             div hr{display: block;}
-            .mail{display: block; margin-top: 10%; font-size: small;}
-            .introduce{float: none; font-size: small; text-overflow: ellipsis; margin-bottom: 10%;}
-            .active_details{margin-top: 61.6px;}
-            .menuBlock{margin: 10px 20px; display: block;}
-            .menu{display: none; width: 100%; height: 30%; position: absolute; top: 61.6px; background-color: white; z-index: 3;
-            margin: 0 0;}
-            .menu ul{margin: 5px; display: block;}
-            .menu li{margin-left: 10px; margin: 15px 0; display: block;}
             h3{text-align: center;}
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.menuBlock').click(function(){
-                $('.menu').slideToggle();
-            });
-            $('#goHome').click(function(){
-                $('.face').css('display', 'block');
-                $('.introduce').css('display', 'block');
-                $('.active_details').css('display', 'none');
-                $('.mail').css('display', 'block');
-                $('#goHome').css('font-weight' ,'bold');
-                $('#goHome').css('color' ,'black');
-                $('#goActive').css('font-weight' ,'400');
-                $('#goActive').css('color' ,'gray');
-                $('.home').css('height', '225px');
-            });
-            $('#goActive').click(function(){
-                $('.face').css('display', 'none');
-                $('.introduce').css('display', 'none');
-                $('.active_details').css('display', 'block');
-                $('.mail').css('display', 'none');  
-                $('#goActive').css('font-weight' ,'bold');
-                $('#goActive').css('color' ,'black');
-                $('#goHome').css('font-weight' ,'400');
-                $('#goHome').css('color' ,'gray');
-                $('.home').css('height', '0');
-            });
-            $('#goTO').click(function(){
-                $('.two-one').css('display', 'inline');
-                $('.one-two').css('display', 'none');
-                $('.one-one').css('display', 'none');
-            });
-            $('#goOT').click(function(){
-                $('.two-one').css('display', 'none');
-                $('.one-two').css('display', 'inline');
-                $('.one-one').css('display', 'none');
-            });
-            $('#goOO').click(function(){
-                $('.two-one').css('display', 'none');
-                $('.one-two').css('display', 'none');
-                $('.one-one').css('display', 'inline');
-            });
-        });
-    </script>
+    <script src="./js/home.js"></script>
+    <script src="./js/active.js"></script>
+    <script src="./js/hobby.js"></script>
+    <script src="./js/menu.js"></script>
 </head>
 <body>
-    <div class="mainContent">
-        <div class="topContent">
-            <div class="nameMenuB">
-                <a class="name" href="">Yang Yoonmo</a>
-                <div class="menuBlock">
-                    <div class="container">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+    <div class="topContent">
+        <div class="nameMenuB">
+            <a class="name" href="">Yang Yoonmo</a>
+            <div class="menuBlock">
+                <div class="container">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#HOME" id="goHome">HOME</a></li>
-                    <li><a href="#GOACTIVE" id="goActive">ACTIVE DETAILS</a></li>
-                </ul>
-            </div>
         </div>
-        <div class="home">
-            <img src="./image/myFace.jpg" alt="" class="face">
-            <div class="introduce">
-                <h3>RESEARCH INTEREST</h3>
-                <p>I'm a college student in the Department of Computer Science and Engineering at Kangwon national university, South Korea.
-                    I graduated from Yangil Middle School and Yangil High School in Yangpyeong, Gyeonggi-do. My goal is to be a game programmer.
-                    So far, I have learned java, python, c++, linux, html, etc., and I will continue to learn many things for my dream.             
-                </p>
-            </div>
-            <a href="mailto:yang582438@naver.com" class="mail">yang582438@naver.com</a>
-        </div>
-        <div class="active_details">
-            <h4 class="whatis">This place is where I have categorized and organized the assignments I completed during my college years, which were related to my major, by semester.</h4>
-            <ul id="semesterList">
-                <li class="semester"><a href="#2-1" id="goTO">2-1</a></li>
-                <li class="semester"><a href="#1-2" id="goOT">1-2</a></li>
-                <li class="semester"><a href="#1-1" id="goOO">1-1</a></li>
+        <div class="menu">
+            <ul>
+                <li><a href="#HOME" id="goHome">HOME</a></li>
+                <li><a href="#ACTIVE" id="goActive">ACTIVE DETAILS</a></li>
+                <li><a href="#HOBBY" id="goHobby">HOBBY </a></li>
             </ul>
-            <div class="two-one">
-                <h2>2-1</h2>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div>test</div> 
+        </div>
+    </div>
+    <div class="home">
+        <img src="./image/myFace.jpg" alt="" class="face">
+        <div class="introduce">
+            <h3>RESEARCH INTEREST</h3>
+            <p>I'm a college student in the Department of Computer Science and Engineering at Kangwon national university, South Korea.
+                I graduated from Yangil Middle School and Yangil High School in Yangpyeong, Gyeonggi-do. My goal is to be a game programmer.
+                So far, I have learned java, python, c++, linux, html, etc., and I will continue to learn many things for my dream.             
+            </p>
+        </div>
+        <a href="mailto:yang582438@naver.com" class="mail">yang582438@naver.com</a>
+    </div>
+    <div class="active_details">
+        <h4 class="whatis">This place is a section that organizes what I have learned during my college life by classifying it by semester.</h4>
+        <ul id="semesterList">
+            <li class="semester"><a href="#2-1" id="goTO">2-1</a></li>
+            <li class="semester"><a href="#1-2" id="goOT">1-2</a></li>
+            <li class="semester"><a href="#1-1" id="goOO">1-1</a></li>
+        </ul>
+        <div class="two-one">
+            <h2>2-1</h2>
+            <hr>
+            <div><a href="./active/2-1/리눅스프로그래밍.zip">Linux Programing</a></div>
+            <div><a href="./active/2-1/선형대수학.zip">linear Algebra</a></div>
+            <div><a href="./active/2-1/웹프로그래밍.zip">Web Programing</a></div>
+            <div><a href="./active/2-1/자료구조.zip">Data Structure</a></div> 
+        </div>
+        <div class="one-two">
+            <h2>1-2</h2>
+            <hr>
+            <div><a href="./active/1-2/객체지향.zip">Object Orient Programing</a></div>
+            <div><a href="./active/1-2/컴퓨팅사고력.zip">Computing Thinking Ability</a></div>
+        </div>
+        <div class="one-one">
+            <h2>1-1</h2>
+            <hr>
+            <div><a href="./active/1-1/미분적분학.zip">Calculus</a></div>
+            <div><a href="./active/1-1/컴퓨터개론.zip">Computer Intorduction</a></div>
+            <div><a href="./active/1-1/파이썬.zip">Python Programing</a></div>
+            <div><a href="./active/1-1/프로그래밍 기초.zip">Programing Basics</a></div>
+        </div>
+    </div>
+    <div class="hobby">
+        <div class="bowling">
+            <h3>Bowling</h3>
+            <hr>
+            <div class="frame">
+                <img src="./image/bowlingPicture.jpg" class="bowlingPicture">
             </div>
-            <div class="one-two">
-                <h2>1-2</h2>
-            </div>
-            <div class="one-one">
-                <h2>1-1</h2>
+            <div class="pIntroduce">
+                <p>This picture was taken to commemorate when I broke the record while participating in a bowling club. For your information, 174 is my score.</p>
+                <p>The average is still about 130 points, but the goal is to raise the average to 170 points or more by making efforts in the future.</p>
             </div>
         </div>
+        <div class="cook">
+            <h3>Cooking</h3>
+            <hr>
+            <div class="frame">
+                <img src="./image/cookPicture.jpg" class="cookPicture">
+            </div>
+            <div class="pIntroduce">
+                <p>This picture was taken when I started living alone in Chuncheon and made Dakgalbi for the first time.</p>
+                <p>As my college life began, I started to live alone. My parents pay for living expenses, and I have been interested in cooking for a long time, so I tend to make dinner as much as possible to save on living expenses. 
+                When I eat the finished dish, I feel more proud than the taste. I plan to cook many dishes in the future.</p>
+            </div>
+        </div>
+        <div class="coding">
+            <h3>Coding Problem</h3>
+            <hr>
+            <div class="frame">
+                <img src="./image/codePicture.jpg" class="codePicture">
+            </div>
+            <div class="pIntroduce">
+                <p>This picture is part of a problem that has been solved before.</p>
+                <p>The first time it started was early this year, before the first semester began. 
+                    Thinking that I should study before returning to school, I thought of the let code introduced in the book I read before.
+                     So I solved one question a day with my friend. 
+                    I haven't solved much yet, but these days, I'm still solving one question if I have time.</p>
+            </div>
+        </div>      
     </div>
 </body>
